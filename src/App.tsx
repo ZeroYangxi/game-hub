@@ -1,17 +1,20 @@
 import { Grid, GridItem, Show } from "@chakra-ui/react";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     //
     <Grid
       templateAreas={{
+        // screen size breakpoint of ChakraUI
         base: `"nav""main"`,
-        lg: `"nav nav""aside main"`, // wider than 1024px
+        lg: `"nav nav""aside main"`, // >1024px
       }}
     >
-      <GridItem area="nav" bg="coral">
-        Nav
+      <GridItem area="nav">
+        <NavBar />
       </GridItem>
+      {/* show "aside" when above lg screen size */}
       <Show above="lg">
         <GridItem area="aside" bg="gold">
           Aside
