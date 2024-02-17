@@ -12,13 +12,17 @@ function App() {
         base: `"nav""main"`,
         lg: `"nav nav""aside main"`, // >1024px
       }}
+      templateColumns={{
+        base: "1fr",
+        lg: "200px 1fr", // fr = stretching and take up all available space
+      }}
     >
       <GridItem area="nav">
         <NavBar />
       </GridItem>
       {/* show "aside" when above lg screen size */}
       <Show above="lg">
-        <GridItem area="aside">
+        <GridItem area="aside" paddingX={5}>
           <GenreList />
         </GridItem>
       </Show>
