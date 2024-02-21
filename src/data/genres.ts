@@ -553,7 +553,7 @@ export default [
   },
   {
     id: 59,
-    name: "Massively Multiplayer",
+    name: "MMO",
     slug: "massively-multiplayer",
     games_count: 3536,
     image_background:
